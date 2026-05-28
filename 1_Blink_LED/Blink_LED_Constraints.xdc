@@ -4,17 +4,27 @@
 ## - rename the used ports (in each line, after get_ports) according to the top level signal names in the project
 ## Note: As the Nexys 4 DDR was rebranded to the Nexys A7 with no substantial changes, this XDC file will also work for the Nexys 4 DDR.
 
-## AMD Vivado TCL Command Reference Guide
+## AMD Vivado TCL (Tool Command Language) Command Reference Guide
 # https://docs.amd.com/r/en-US/ug835-vivado-tcl-commands/
 
-## Clock signal
+#--------------------------------------------------------------------------------------------------
+# 1_Blink_LED - Project Notes
+#
+#   For this project, we need a clock object that is driven by the board's CLK100MHZ system clock
+#   which is wired to an IO pin on the FPGA, and a definition for the LED[0] IO port.
+#--------------------------------------------------------------------------------------------------
+
+## Clock signal dictional entry creation for physical clock pin (externally generated clock)
 #   Max Notes: defines dictionary [NAME VALUE] pairs for package pins and IO standards, then
-#   searches for defined IO ports of the given port name(s)
+#   assigns those properties to IO port object of the given name
 set_property -dict { PACKAGE_PIN E3    IOSTANDARD LVCMOS33 } [get_ports { CLK100MHZ }];      #IO_L12P_T1_MRCC_35 Sch=clk100mhz
 
-#   Max Notes: defines dictionary [NAME VALUE] pairs for package pins and IO standards, then
-#   searches for defined IO ports of the given port name(s)
-#create_clock -add -name sys_clk_pin -period 10.00 -waveform {0 5} [get_ports {CLK100MHZ}];
+## Clock signal object creation 
+#   Max Notes: Adds a new clock object called "sys_clk_100mhz" with a period of 10 ns, 
+#   with a rising edge occurring at 0 ns during a clock cycle, a falling edge occurring at
+#   5 ns during a clock cycle, and defines that this new clock signal object will be sourced
+#   from the given IO port name.
+create_clock -add -name sys_clk_100mhz -period 10.00 -waveform {0 5} [get_ports {CLK100MHZ}];
 
 
 ##Switches
@@ -36,7 +46,7 @@ set_property -dict { PACKAGE_PIN E3    IOSTANDARD LVCMOS33 } [get_ports { CLK100
 #set_property -dict { PACKAGE_PIN V10   IOSTANDARD LVCMOS33 } [get_ports { SW[15] }]; #IO_L21P_T3_DQS_14 Sch=sw[15]
 
 ## LEDs
-#set_property -dict { PACKAGE_PIN H17   IOSTANDARD LVCMOS33 } [get_ports { LED[0] }]; #IO_L18P_T2_A24_15 Sch=led[0]
+set_property -dict { PACKAGE_PIN H17   IOSTANDARD LVCMOS33 } [get_ports { LED[0] }]; #IO_L18P_T2_A24_15 Sch=led[0]
 #set_property -dict { PACKAGE_PIN K15   IOSTANDARD LVCMOS33 } [get_ports { LED[1] }]; #IO_L24P_T3_RS1_15 Sch=led[1]
 #set_property -dict { PACKAGE_PIN J13   IOSTANDARD LVCMOS33 } [get_ports { LED[2] }]; #IO_L17N_T2_A25_15 Sch=led[2]
 #set_property -dict { PACKAGE_PIN N14   IOSTANDARD LVCMOS33 } [get_ports { LED[3] }]; #IO_L8P_T1_D11_14 Sch=led[3]

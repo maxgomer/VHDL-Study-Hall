@@ -4,15 +4,26 @@
 ## - rename the used ports (in each line, after get_ports) according to the top level signal names in the project
 ## Note: As the Nexys 4 DDR was rebranded to the Nexys A7 with no substantial changes, this XDC file will also work for the Nexys 4 DDR.
 
-## AMD Vivado TCL Command Reference Guide
+## AMD Vivado TCL (Tool Command Language) Command Reference Guide
 # https://docs.amd.com/r/en-US/ug835-vivado-tcl-commands/
 
-## Clock signal
-#   Max Notes: defines dictionary [NAME VALUE] pairs for package pins and IO standards, then
-#   searches for defined IO ports of the given port name(s)
-#set_property -dict { PACKAGE_PIN E3    IOSTANDARD LVCMOS33 } [get_ports { CLK100MHZ }]; #IO_L12P_T1_MRCC_35 Sch=clk100mhz
+#--------------------------------------------------------------------------------------------------
+# PROJECT_NAME - Project Notes
+#
+#   For this project...
+#--------------------------------------------------------------------------------------------------
 
-#create_clock -add -name sys_clk_pin -period 10.00 -waveform {0 5} [get_ports {CLK100MHZ}];
+## Clock signal dictional entry creation for physical clock pin (externally generated clock)
+#   Max Notes: defines dictionary [NAME VALUE] pairs for package pins and IO standards, then
+#   assigns those properties to IO port object of the given name
+#set_property -dict { PACKAGE_PIN E3    IOSTANDARD LVCMOS33 } [get_ports { CLK100MHZ }];      #IO_L12P_T1_MRCC_35 Sch=clk100mhz
+
+## Clock signal object creation 
+#   Max Notes: Adds a new clock object called "sys_clk_100mhz" with a period of 10 ns, 
+#   with a rising edge occurring at 0 ns during a clock cycle, a falling edge occurring at
+#   5 ns during a clock cycle, and defines that this new clock signal object will be sourced
+#   from the given IO port name.
+#create_clock -add -name sys_clk_100mhz -period 10.00 -waveform {0 5} [get_ports {CLK100MHZ}];
 
 
 ##Switches
