@@ -1,6 +1,6 @@
 -- Project 1 - Blink_LED
 --
---    Blink LED[0] at a frequency of 1 Hz (with 50% duty cycle) using the 100MHz board system clock
+--    Blink LED[0] at a frequency of 1 Hz (with 50% duty cycle) using the 100MHz board system clock.
 
 -- Library headers
 library IEEE;
@@ -39,10 +39,12 @@ begin
         -- (100E6) / (50E6) = 2 Hz
         if (counter = 50E6) then
             clk_1hz <= not clk_1hz;     -- toggle 1 Hz clock edge
-            LED <= clk_1hz;             -- assign LED output to 1 Hz clock value
             counter <= 0;               -- reset counter
         end if;
 
     end process;
+
+    -- Assign LED output to always be the value of the 1 Hz clock signal
+    LED <= clk_1hz;
 
 end rtl;
