@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2025.1 (64-bit)
+# SW Build 6140274 on Thu May 22 00:12:29 MDT 2025
+# IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
+# SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
+# Start of session at: Thu Jul  3 10:53:10 2025
+# Process ID         : 8048
+# Current directory  : D:/Embedded/Nexys-A7/Nexys-A7/hw/proj/hw.runs/ClkGen_synth_1
+# Command line       : vivado.exe -log ClkGen.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source ClkGen.tcl
+# Log file           : D:/Embedded/Nexys-A7/Nexys-A7/hw/proj/hw.runs/ClkGen_synth_1/ClkGen.vds
+# Journal file       : D:/Embedded/Nexys-A7/Nexys-A7/hw/proj/hw.runs/ClkGen_synth_1\vivado.jou
+# Running On         : DFazakas
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 22631
+# Processor Detail   : 12th Gen Intel(R) Core(TM) i7-12700H
+# CPU Frequency      : 2688 MHz
+# CPU Physical cores : 14
+# CPU Logical cores  : 20
+# Host memory        : 68388 MB
+# Swap memory        : 0 MB
+# Total Virtual      : 68388 MB
+# Available Virtual  : 44524 MB
+#-----------------------------------------------------------
+source ClkGen.tcl -notrace

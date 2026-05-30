@@ -3,12 +3,12 @@
 # SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
 # IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
 # SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-# Start of session at: Thu May 28 15:42:43 2026
-# Process ID         : 17152
-# Current directory  : C:/CM/VHDL_Study_Hall/1_Blink_LED/1_Blink_LED.runs/impl_1
-# Command line       : vivado.exe -log Blink_LED.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source Blink_LED.tcl -notrace
-# Log file           : C:/CM/VHDL_Study_Hall/1_Blink_LED/1_Blink_LED.runs/impl_1/Blink_LED.vdi
-# Journal file       : C:/CM/VHDL_Study_Hall/1_Blink_LED/1_Blink_LED.runs/impl_1\vivado.jou
+# Start of session at: Sat May 30 14:59:16 2026
+# Process ID         : 24344
+# Current directory  : C:/CM/VHDL_Study_Hall/Demo_OutOfBoxHardwareShowcase/hw.runs/synth_1
+# Command line       : vivado.exe -log Nexys4DdrUserDemo.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Nexys4DdrUserDemo.tcl
+# Log file           : C:/CM/VHDL_Study_Hall/Demo_OutOfBoxHardwareShowcase/hw.runs/synth_1/Nexys4DdrUserDemo.vds
+# Journal file       : C:/CM/VHDL_Study_Hall/Demo_OutOfBoxHardwareShowcase/hw.runs/synth_1\vivado.jou
 # Running On         : DESKTOP-3778IF0
 # Platform           : Windows Server 2016 or Windows 10
 # Operating System   : 26200
@@ -19,6 +19,6 @@
 # Host memory        : 33443 MB
 # Swap memory        : 2147 MB
 # Total Virtual      : 35590 MB
-# Available Virtual  : 15433 MB
+# Available Virtual  : 13406 MB
 #-----------------------------------------------------------
-source Blink_LED.tcl -notrace
+source Nexys4DdrUserDemo.tcl -notrace

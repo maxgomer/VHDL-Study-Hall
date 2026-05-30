@@ -1,0 +1,118 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Sat May 30 14:58:10 2026
+# Process ID         : 17152
+# Current directory  : C:/CM/VHDL_Study_Hall/Demo_OutOfBoxHardwareShowcase
+# Command line       : vivado.exe -gui_launcher_event rodinguilauncherevent19232 C:\CM\VHDL_Study_Hall\Demo_OutOfBoxHardwareShowcase\hw.xpr
+# Log file           : C:/CM/VHDL_Study_Hall/Demo_OutOfBoxHardwareShowcase/vivado.log
+# Journal file       : C:/CM/VHDL_Study_Hall/Demo_OutOfBoxHardwareShowcase\vivado.jou
+# Running On         : DESKTOP-3778IF0
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26200
+# Processor Detail   : AMD Ryzen 7 7800X3D 8-Core Processor           
+# CPU Frequency      : 4192 MHz
+# CPU Physical cores : 8
+# CPU Logical cores  : 16
+# Host memory        : 33443 MB
+# Swap memory        : 2147 MB
+# Total Virtual      : 35590 MB
+# Available Virtual  : 15658 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/CM/VHDL_Study_Hall/Demo_OutOfBoxHardwareShowcase/hw.xpr
+update_compile_order -fileset sources_1
+set_property STEPS.WRITE_BITSTREAM.ARGS.BIN_FILE true [get_runs impl_1]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {C:/CM/VHDL_Study_Hall/Demo_OutOfBoxHardwareShowcase/hw.runs/impl_1/Nexys4DdrUserDemo.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+create_hw_cfgmem -hw_device [lindex [get_hw_devices xc7a100t_0] 0] [lindex [get_cfgmem_parts {s25fl128sxxxxxx0-spi-x1_x2_x4}] 0]
+set_property PROGRAM.BLANK_CHECK  0 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a100t_0] 0]]
+set_property PROGRAM.ERASE  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a100t_0] 0]]
+set_property PROGRAM.CFG_PROGRAM  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a100t_0] 0]]
+set_property PROGRAM.VERIFY  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a100t_0] 0]]
+set_property PROGRAM.CHECKSUM  0 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a100t_0] 0]]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROGRAM.ADDRESS_RANGE  {use_file} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a100t_0] 0]]
+set_property PROGRAM.FILES [list "C:/CM/VHDL_Study_Hall/Demo_OutOfBoxHardwareShowcase/hw.runs/impl_1/Nexys4DdrUserDemo.bin" ] [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a100t_0] 0]]
+set_property PROGRAM.PRM_FILE {} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a100t_0] 0]]
+set_property PROGRAM.UNUSED_PIN_TERMINATION {pull-none} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a100t_0] 0]]
+set_property PROGRAM.BLANK_CHECK  0 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a100t_0] 0]]
+set_property PROGRAM.ERASE  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a100t_0] 0]]
+set_property PROGRAM.CFG_PROGRAM  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a100t_0] 0]]
+set_property PROGRAM.VERIFY  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a100t_0] 0]]
+set_property PROGRAM.CHECKSUM  0 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a100t_0] 0]]
+startgroup 
+create_hw_bitstream -hw_device [lindex [get_hw_devices xc7a100t_0] 0] [get_property PROGRAM.HW_CFGMEM_BITFILE [ lindex [get_hw_devices xc7a100t_0] 0]]; program_hw_devices [lindex [get_hw_devices xc7a100t_0] 0]; refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0];
+program_hw_cfgmem -hw_cfgmem [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a100t_0] 0]]
+endgroup
+close_project
+open_project C:/CM/VHDL_Study_Hall/1_Blink_LED/1_Blink_LED.xpr
+update_compile_order -fileset sources_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {C:/CM/VHDL_Study_Hall/1_Blink_LED/1_Blink_LED.runs/impl_1/Blink_LED.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+create_hw_cfgmem -hw_device [get_hw_devices xc7a100t_0] -mem_dev [lindex [get_cfgmem_parts {s25fl128sxxxxxx0-spi-x1_x2_x4}] 0]
+set_property PROGRAM.ADDRESS_RANGE  {use_file} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a100t_0] 0]]
+set_property PROGRAM.FILES [list "C:/CM/VHDL_Study_Hall/1_Blink_LED/1_Blink_LED.runs/impl_1/Blink_LED.bin" ] [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a100t_0] 0]]
+set_property PROGRAM.PRM_FILE {} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a100t_0] 0]]
+set_property PROGRAM.UNUSED_PIN_TERMINATION {pull-none} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a100t_0] 0]]
+set_property PROGRAM.BLANK_CHECK  0 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a100t_0] 0]]
+set_property PROGRAM.ERASE  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a100t_0] 0]]
+set_property PROGRAM.CFG_PROGRAM  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a100t_0] 0]]
+set_property PROGRAM.VERIFY  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a100t_0] 0]]
+set_property PROGRAM.CHECKSUM  0 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a100t_0] 0]]
+startgroup 
+create_hw_bitstream -hw_device [lindex [get_hw_devices xc7a100t_0] 0] [get_property PROGRAM.HW_CFGMEM_BITFILE [ lindex [get_hw_devices xc7a100t_0] 0]]; program_hw_devices [lindex [get_hw_devices xc7a100t_0] 0]; refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0];
+program_hw_cfgmem -hw_cfgmem [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a100t_0] 0]]
+endgroup
+close_hw_manager
+open_hw_manager
+launch_simulation
+source TB_Blink_LED.tcl
+close_sim
+launch_simulation
+source TB_Blink_LED.tcl
+current_wave_config {Untitled 2}
+log_wave {/TB_Blink_LED/UUT/counter} 
+current_wave_config {Untitled 2}
+log_wave {/TB_Blink_LED/UUT/counter} 
+current_wave_config {Untitled 2}
+log_wave {/TB_Blink_LED/UUT/counter} 
+relaunch_sim
+relaunch_sim
+current_wave_config {Untitled 2}
+add_wave {{/TB_Blink_LED/UUT/RE_counter}} 
+current_wave_config {Untitled 2}
+log_wave {/TB_Blink_LED/UUT/RE_counter} 
+current_wave_config {Untitled 2}
+add_wave {{/TB_Blink_LED/UUT/RE_counter}} 
+relaunch_sim
+relaunch_sim
+log_wave {/TB_Blink_LED/UUT/RE_counter} 
+relaunch_sim
+current_wave_config {Untitled 3}
+log_wave {/TB_Blink_LED/UUT/RE_counter} 
+current_wave_config {Untitled 3}
+add_wave {{/TB_Blink_LED/UUT/RE_counter}} 
+relaunch_sim
+open_run impl_1
+close_sim
+close_project
+create_project project_TEMP C:/CM/VHDL_Study_Hall/project_TEMP -part xc7a100tcsg324-1
+set_property board_part digilentinc.com:nexys-a7-100t:part0:1.3 [current_project]
+add_files -fileset constrs_1 -norecurse {{C:/CM/VHDL_Study_Hall/Nexys A7 Master Constraint Files/Nexys-A7-100T-Master.xdc}}
+import_files -fileset constrs_1 {{C:/CM/VHDL_Study_Hall/Nexys A7 Master Constraint Files/Nexys-A7-100T-Master.xdc}}
+remove_files  -fileset constrs_1 {{C:/CM/VHDL_Study_Hall/project_TEMP/project_TEMP.srcs/constrs_1/imports/Nexys A7 Master Constraint Files/Nexys-A7-100T-Master.xdc}}
+file delete -force {C:/CM/VHDL_Study_Hall/project_TEMP/project_TEMP.srcs/constrs_1/imports/Nexys A7 Master Constraint Files/Nexys-A7-100T-Master.xdc}

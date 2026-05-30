@@ -1,0 +1,23 @@
+
+SPI Flash Memory:
+---------------------------------------------------------------------------------------------------
+- Physical part is on rear side of board at IC11
+- IC is marked "Spansion", which has been dissolved and acquired by Infineon
+- Vivado will tell you if you attempt to program the SPI Flash memory with the 
+  incorrect memory part selected, and it will tell you it detected a different part
+  with a specific name.
+
+- Corresponding Memory Configuration Part details:
+    - Manufacturer: Infineon
+    - Memory Part Name: s25fl128sxxxxxx0-spi-x1_x2_x4
+    - Density: 128 Mb
+    - Type: SPI (mine is quad SPI, but type only says SPI)
+    - Width: x1_x2_x4
+
+
+SPI Flash Automatic Programming on Power-On:
+---------------------------------------------------------------------------------------------------
+- If the J1 jumper is correctly set to QSPI, the FPGA will attempt to load an image stored on the SPI
+  flash memory upon power-on. (IMPORTANT NOTE!!!): This only happens if the FPGA board is not actively
+  open in the Vivado Hardware Manager! Ensure that all hardware targets are closed in the Hardware
+  Manager.

@@ -13,20 +13,21 @@
 #   For this project...
 #--------------------------------------------------------------------------------------------------
 
-## Clock signal dictional entry creation for physical clock pin (externally generated clock)
+## Clock signal dictionary entry creation for physical clock pin (externally generated clock)
 #   Max Notes: defines dictionary [NAME VALUE] pairs for package pins and IO standards, then
-#   assigns those properties to IO port object of the given name
-#set_property -dict { PACKAGE_PIN E3    IOSTANDARD LVCMOS33 } [get_ports { CLK100MHZ }];      #IO_L12P_T1_MRCC_35 Sch=clk100mhz
+#   assigns those properties to the port object of the given name (must match port name used in VHDL
+#   entities)
+#set_property -dict { PACKAGE_PIN E3    IOSTANDARD LVCMOS33 } [get_ports { sys_clk_100mhz }];      #IO_L12P_T1_MRCC_35 Sch=clk100mhz
 
 ## Clock signal object creation 
-#   Max Notes: Adds a new clock object called "sys_clk_100mhz" with a period of 10 ns, 
+#   Max Notes: Adds a new clock object called "SYS_CLK_100MHZ_OBJ" with a period of 10 ns, 
 #   with a rising edge occurring at 0 ns during a clock cycle, a falling edge occurring at
 #   5 ns during a clock cycle, and defines that this new clock signal object will be sourced
 #   from the given IO port name.
-#create_clock -add -name sys_clk_100mhz -period 10.00 -waveform {0 5} [get_ports {CLK100MHZ}];
+#create_clock -add -name SYS_CLK_100MHZ_OBJ -period 10.00 -waveform {0 5} [get_ports { sys_clk_100mhz }];
 
 
-##Switches
+## Switches
 #set_property -dict { PACKAGE_PIN J15   IOSTANDARD LVCMOS33 } [get_ports { SW[0] }]; #IO_L24N_T3_RS0_15 Sch=sw[0]
 #set_property -dict { PACKAGE_PIN L16   IOSTANDARD LVCMOS33 } [get_ports { SW[1] }]; #IO_L3N_T0_DQS_EMCCLK_14 Sch=sw[1]
 #set_property -dict { PACKAGE_PIN M13   IOSTANDARD LVCMOS33 } [get_ports { SW[2] }]; #IO_L6N_T0_D08_VREF_14 Sch=sw[2]

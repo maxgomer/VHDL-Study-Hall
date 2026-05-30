@@ -56,9 +56,13 @@ if {$::dispatch::connected} {
 }
 
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param checkpoint.writeSynthRtdsInDcp 1
 set_param general.usePosixSpawnForFork 1
+set_param chipscope.maxJobs 4
+set_param synth.incrementalSynthesisCache C:/Users/maxim/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-19560-DESKTOP-3778IF0/incrSyn
 set_param xicom.use_bs_reader 1
-set_msg_config -id {Common 17-41} -limit 10000000
+set_msg_config -id {Synth 8-256} -limit 10000
+set_msg_config -id {Synth 8-638} -limit 10000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a100tcsg324-1
 
@@ -89,6 +93,8 @@ read_xdc C:/CM/VHDL_Study_Hall/1_Blink_LED/Blink_LED_Constraints.xdc
 set_property used_in_implementation false [get_files C:/CM/VHDL_Study_Hall/1_Blink_LED/Blink_LED_Constraints.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
+
+read_checkpoint -auto_incremental -incremental C:/CM/VHDL_Study_Hall/1_Blink_LED/1_Blink_LED.srcs/utils_1/imports/synth_1/Blink_LED.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }
