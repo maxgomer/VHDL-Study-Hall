@@ -1,0 +1,4 @@
+
+- Vivado actually generates TCL (Tool Command Language) commands in order to perform build tasks.
+  These TCL commands are stored here "your_project_name.runs/impl_1/runme.log (or .jou in the project root)".
+  You can use these commands as useful references when you write your own TCL code to perform build tasks.

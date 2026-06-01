@@ -928,3 +928,5 @@ add_files -fileset constrs_1 -norecurse {{C:/CM/VHDL_Study_Hall/Nexys A7 Master 
 import_files -fileset constrs_1 {{C:/CM/VHDL_Study_Hall/Nexys A7 Master Constraint Files/Nexys-A7-100T-Master.xdc}}
 remove_files  -fileset constrs_1 {{C:/CM/VHDL_Study_Hall/project_TEMP/project_TEMP.srcs/constrs_1/imports/Nexys A7 Master Constraint Files/Nexys-A7-100T-Master.xdc}}
 file delete -force {C:/CM/VHDL_Study_Hall/project_TEMP/project_TEMP.srcs/constrs_1/imports/Nexys A7 Master Constraint Files/Nexys-A7-100T-Master.xdc}
+exit
+INFO: [Common 17-206] Exiting Vivado at Sat May 30 18:02:43 2026...
