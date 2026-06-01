@@ -4,7 +4,7 @@
 
 -- Library headers
 library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_1164.ALL;    -- required for use of STD_LOGIC data type
 
 
 -- Define the entity being used in this module
