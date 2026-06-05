@@ -1,0 +1,84 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Fri Jun  5 15:01:14 2026
+| Host         : DESKTOP-3778IF0 running 64-bit major release  (build 9200)
+| Command      : report_timing -sort_by group -max_paths 100 -path_type summary -file C:/CM/VHDL_Study_Hall/1_Blink_LED_NonProjectVersion/Build_Results/post_route_timing.rpt
+| Design       : Blink_LED
+| Device       : 7a100t-csg324
+| Speed File   : -1  PRODUCTION 1.23 2018-06-13
+| Design State : Routed
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Report
+
+Startpoint                     Endpoint                       Slack(ns)     
+----------------------------------------------------------------------------
+RE_counter_reg[20]/C           RE_counter_reg[29]/R           5.931         
+RE_counter_reg[20]/C           RE_counter_reg[30]/R           5.931         
+RE_counter_reg[20]/C           RE_counter_reg[31]/R           5.931         
+RE_counter_reg[20]/C           RE_counter_reg[21]/R           6.025         
+RE_counter_reg[20]/C           RE_counter_reg[22]/R           6.025         
+RE_counter_reg[20]/C           RE_counter_reg[23]/R           6.025         
+RE_counter_reg[20]/C           RE_counter_reg[24]/R           6.025         
+RE_counter_reg[20]/C           RE_counter_reg[25]/R           6.071         
+RE_counter_reg[20]/C           RE_counter_reg[26]/R           6.071         
+RE_counter_reg[20]/C           RE_counter_reg[27]/R           6.071         
+RE_counter_reg[20]/C           RE_counter_reg[28]/R           6.071         
+RE_counter_reg[20]/C           RE_counter_reg[17]/R           6.191         
+RE_counter_reg[20]/C           RE_counter_reg[18]/R           6.191         
+RE_counter_reg[20]/C           RE_counter_reg[19]/R           6.191         
+RE_counter_reg[20]/C           RE_counter_reg[20]/R           6.191         
+RE_counter_reg[20]/C           RE_counter_reg[5]/R            6.234         
+RE_counter_reg[20]/C           RE_counter_reg[6]/R            6.234         
+RE_counter_reg[20]/C           RE_counter_reg[7]/R            6.234         
+RE_counter_reg[20]/C           RE_counter_reg[8]/R            6.234         
+RE_counter_reg[20]/C           RE_counter_reg[13]/R           6.315         
+RE_counter_reg[20]/C           RE_counter_reg[14]/R           6.315         
+RE_counter_reg[20]/C           RE_counter_reg[15]/R           6.315         
+RE_counter_reg[20]/C           RE_counter_reg[16]/R           6.315         
+RE_counter_reg[20]/C           RE_counter_reg[10]/R           6.487         
+RE_counter_reg[20]/C           RE_counter_reg[11]/R           6.487         
+RE_counter_reg[20]/C           RE_counter_reg[12]/R           6.487         
+RE_counter_reg[20]/C           RE_counter_reg[9]/R            6.487         
+RE_counter_reg[20]/C           RE_counter_reg[1]/R            6.520         
+RE_counter_reg[20]/C           RE_counter_reg[2]/R            6.520         
+RE_counter_reg[20]/C           RE_counter_reg[3]/R            6.520         
+RE_counter_reg[20]/C           RE_counter_reg[4]/R            6.520         
+RE_counter_reg[20]/C           RE_counter_reg[0]/R            6.524         
+RE_counter_reg[20]/C           clk_out_1hz_reg/D              6.887         
+RE_counter_reg[1]/C            RE_counter_reg[30]/D           7.345         
+RE_counter_reg[1]/C            RE_counter_reg[31]/D           7.440         
+RE_counter_reg[1]/C            RE_counter_reg[29]/D           7.456         
+RE_counter_reg[1]/C            RE_counter_reg[26]/D           7.460         
+RE_counter_reg[1]/C            RE_counter_reg[28]/D           7.481         
+RE_counter_reg[1]/C            RE_counter_reg[27]/D           7.555         
+RE_counter_reg[1]/C            RE_counter_reg[25]/D           7.571         
+RE_counter_reg[1]/C            RE_counter_reg[22]/D           7.575         
+RE_counter_reg[1]/C            RE_counter_reg[24]/D           7.596         
+RE_counter_reg[1]/C            RE_counter_reg[23]/D           7.670         
+RE_counter_reg[1]/C            RE_counter_reg[21]/D           7.686         
+RE_counter_reg[1]/C            RE_counter_reg[18]/D           7.690         
+RE_counter_reg[1]/C            RE_counter_reg[20]/D           7.711         
+RE_counter_reg[1]/C            RE_counter_reg[19]/D           7.785         
+RE_counter_reg[1]/C            RE_counter_reg[17]/D           7.801         
+RE_counter_reg[1]/C            RE_counter_reg[14]/D           7.804         
+RE_counter_reg[1]/C            RE_counter_reg[16]/D           7.825         
+RE_counter_reg[1]/C            RE_counter_reg[15]/D           7.899         
+RE_counter_reg[1]/C            RE_counter_reg[13]/D           7.915         
+RE_counter_reg[1]/C            RE_counter_reg[10]/D           7.919         
+RE_counter_reg[1]/C            RE_counter_reg[12]/D           7.940         
+RE_counter_reg[1]/C            RE_counter_reg[11]/D           8.014         
+RE_counter_reg[1]/C            RE_counter_reg[9]/D            8.030         
+RE_counter_reg[1]/C            RE_counter_reg[6]/D            8.034         
+RE_counter_reg[1]/C            RE_counter_reg[8]/D            8.055         
+RE_counter_reg[1]/C            RE_counter_reg[7]/D            8.129         
+RE_counter_reg[1]/C            RE_counter_reg[5]/D            8.145         
+RE_counter_reg[2]/C            RE_counter_reg[4]/D            8.308         
+RE_counter_reg[2]/C            RE_counter_reg[3]/D            8.368         
+RE_counter_reg[1]/C            RE_counter_reg[2]/D            8.502         
+RE_counter_reg[0]/C            RE_counter_reg[1]/D            8.671         
+RE_counter_reg[0]/C            RE_counter_reg[0]/D            8.902         
+
+
+
