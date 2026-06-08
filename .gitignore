@@ -3,3 +3,7 @@
 # Ignore all Waveform DataBase files from the Vivado simulator, as these can easily become
 # massive multi-gigabyte files.
 *.wdb
+
+# Ignore all WLF files from the ModelSim simulator, as these can easily become massive
+# multi-gigabyte files.
+*.wlf
