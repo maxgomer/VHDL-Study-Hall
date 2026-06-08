@@ -31,7 +31,7 @@ file mkdir $build_output_path
 #    Read design sources and constraint files.
 # -------------------------------------------------------------------------------------------------
 #NOTE: The "glob" command is used to return a list of files at the specified path.
-read_vhdl                [ glob $VHDL_design_path/*.vhdl ]
+read_vhdl                [ glob $VHDL_design_path/*.vhd ]
 read_xdc                 $constraint_path
 
 
@@ -77,7 +77,7 @@ report_power             -file $build_output_path/post_route_power.rpt
 report_drc               -file $build_output_path/post_impl_drc.rpt
 
 # Write VHDL netlist
-write_vhdl               -force $build_output_path/design_impl_netlist.vhdl
+write_vhdl               -force $build_output_path/design_impl_netlist.vhd
 
 # Write constraints (is this needed if I already have an XDC constraint file?)
 write_xdc                -no_fixed_only -force $build_output_path/design_constraints.xdc
