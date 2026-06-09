@@ -7,8 +7,8 @@
 
 -- Library headers
 library ieee;
-use ieee.std_logic_1164.all;    -- for STD_LOGIC data type
-
+use ieee.std_logic_1164.all;  -- for STD_LOGIC data type
+use work.Sim_Utilities.all;   -- for custom simulation verification functions/procedures
 
 -- Define testbench entity (no port map needed)
 entity TB_Blink_LED is
@@ -23,6 +23,7 @@ architecture stimulus of TB_Blink_LED is
     signal  virtual_clk_100mhz  : std_logic := '0';
     signal  out_LED             : std_logic;
     signal  test_finished       : std_logic := '0';
+    signal  test_string         : string(1 to 15) := "Just a test!>:)";
 
     -- Declare components that will be used (components are implemented in the UUT)
     component Blink_LED is
@@ -49,7 +50,8 @@ begin
 
     -- Main stimulus
     process begin
-        wait for 0.2 sec;
+        wait for 0.01 sec;
+        test_write_output(test_string);
         test_finished <= '1';
     end process;
 

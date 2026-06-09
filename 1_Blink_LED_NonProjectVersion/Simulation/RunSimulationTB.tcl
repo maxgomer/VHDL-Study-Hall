@@ -9,7 +9,6 @@
 # https://ww1.microchip.com/downloads/aemDocuments/documents/FPGA/swdocs/modelsim/modelsim_tut_2024_2.pdf
 
 
-#
 set test_start_time [clock seconds]
 
 # -------------------------------------------------------------------------------------------------
@@ -50,6 +49,7 @@ vmap library1 work
 #          compilation process. The "-2008" flag here forces the VHDL 2008 version to be used,
 #          which includes the STD.ENV library that is useful for simulation commands.
 # -------------------------------------------------------------------------------------------------
+vcom -2008 ../../Simulation_Utilities/Simulation_Utilities.vhd
 vcom -2008 ../Design/Blink_LED.vhd
 vcom -2008 TB_Blink_LED.vhd
 
