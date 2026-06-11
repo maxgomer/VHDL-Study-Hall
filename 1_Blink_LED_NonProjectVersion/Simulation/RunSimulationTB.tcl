@@ -131,5 +131,10 @@ when {test_finished = 1} {
    set elapsed_time_minutes                 [expr $elapsed_time_raw_seconds_minus_hours / 60]
    set elapsed_time_seconds                 [expr $elapsed_time_raw_seconds_minus_hours - $elapsed_time_minutes * 60]
    echo "Test elapsed time = $elapsed_time_hours hours, $elapsed_time_minutes minutes, $elapsed_time_seconds seconds"
+
+   # Open test results file in append mode, and print final line for test elapsed time
+   set test_results_file [open $test_results_file_name a]
+   puts $test_results_file "Test Elapsed Time = $elapsed_time_hours hours : $elapsed_time_minutes minutes : $elapsed_time_seconds seconds"
+   close $test_results_file
 }
 run -all

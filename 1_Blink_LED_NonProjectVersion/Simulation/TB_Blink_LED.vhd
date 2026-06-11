@@ -47,7 +47,7 @@ begin
    end process;
    -- Main stimulus
    process begin
-      --setup_results_file;
+      setup_verification_stats;
 
       wait for 0.01 sec;
       -- test_write_output(test_string);
@@ -62,7 +62,7 @@ begin
       test_write_output(test_string);
       wait for 1 ns;
 
-      -- finish_results_file;
+      finish_results_file;
       test_finished <= '1';
    end process;
 
