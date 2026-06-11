@@ -19,11 +19,11 @@ end TB_Blink_LED;
 architecture stimulus of TB_Blink_LED is
    -- Declare local signals
    constant clk_period_100mhz : time := 10 ns;    -- 1 / (clk frequency) = clk period
-                                                   -- 1 / (100 MHz) = 10 ns clk period
+                                                  -- 1 / (100 MHz) = 10 ns clk period
    signal virtual_clk_100mhz  : std_logic := '0';
    signal out_LED             : std_logic;
    signal test_finished       : std_logic := '0';
-   signal test_string         : string(1 to 15) := "Just a test! :)";
+
    -- Declare components that will be used (components are implemented in the UUT)
    component Blink_LED is
       port (
@@ -50,16 +50,13 @@ begin
       setup_verification_stats;
 
       wait for 0.01 sec;
-      -- test_write_output(test_string);
       wait for 1 ns;
-   
-      test_string <= "Just a new test";
-      wait for 1 ns;
-      test_write_output(test_string);
-      test_write_output(test_string);
-      test_write_output(test_string);
-      test_write_output(test_string);
-      test_write_output(test_string);
+      test_write_output("This is a string :)", '1', '1');
+      -- test_write_output("This is a string :)");
+      -- test_write_output("This is a string :)");
+      -- test_write_output("This is a string :)");
+      -- test_write_output("This is a string :)");
+      -- test_write_output("This is a string :)");
       wait for 1 ns;
 
       finish_results_file;
