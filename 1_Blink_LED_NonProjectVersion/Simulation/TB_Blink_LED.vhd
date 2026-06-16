@@ -51,7 +51,12 @@ begin
 
       wait for 0.01 sec;
       wait for 1 ns;
-      test_write_output("This is a string :)", '1', '1');
+      check("This is a string :)", '1', '1');
+      check("This is a string :)", '1', '1');
+      check("This is a string :)", '1', '1');
+      check("This is a string :)", '0', '1');
+      check("This is a string :)", '1', '0');
+      check("This is a string :)", '0', '0');
       -- test_write_output("This is a string :)");
       -- test_write_output("This is a string :)");
       -- test_write_output("This is a string :)");
