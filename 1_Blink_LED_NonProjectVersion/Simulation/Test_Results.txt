@@ -3,20 +3,20 @@ Verification Test Results
 =======================================================================================================================================================================================================
 
 Test Name: Blink_LED
-Test Date: 2026-06-16 12:27:03
+Test Date: 2026-06-16 16:38:47
 
 Check # | Pass/Fail | Description                                                                                                         | Expected       | Actual         | Tolerance                
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-1         PASS        This is a string :)                                                                                                   1                1                N/A                      
-2         PASS        This is a string :)                                                                                                   1                1                N/A                      
-3         PASS        This is a string :)                                                                                                   1                1                N/A                      
-4         FAIL        This is a string :)                                                                                                   0                1                N/A                      
-5         FAIL        This is a string :)                                                                                                   1                0                N/A                      
-6         PASS        This is a string :)                                                                                                   0                0                N/A                      
+1         PASS        After 1st rising edge of LED output, LED output is continuously held high for 0.5 seconds                             500000000 ns     500000000 ns     N/A                      
+2         PASS        After 1st falling edge of LED output, LED output is continuously held low for 0.5 seconds                             500000000 ns     500000000 ns     N/A                      
+3         PASS        After 2nd rising edge of LED output, LED output is continuously held high for 0.5 seconds                             500000000 ns     500000000 ns     N/A                      
+4         PASS        After 2nd falling edge of LED output, LED output is continuously held low for 0.5 seconds                             500000000 ns     500000000 ns     N/A                      
+5         PASS        After 3rd rising edge of LED output, LED output is continuously held high for 0.5 seconds                             500000000 ns     500000000 ns     N/A                      
+6         PASS        After 3rd falling edge of LED output, LED output is continuously held low for 0.5 seconds                             500000000 ns     500000000 ns     N/A                      
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Results Summary:
-   Total PASS: 4 / 6
-   Total FAIL: 2
+   Total PASS: 6 / 6
+   Total FAIL: 0
 
-Test Elapsed Time = 0 hours : 0 minutes : 4 seconds
+Test Elapsed Time = 0 hours : 7 minutes : 51 seconds

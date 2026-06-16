@@ -45,11 +45,19 @@ package Sim_Utilities is
    procedure check( constant check_description  : in string;
                     constant expected           : in integer;
                     constant actual             : in integer );
+   procedure check( constant check_description  : in string;
+                    constant expected           : in time;
+                    constant actual             : in time );
+   procedure check( constant check_description  : in string;
+                    constant expected           : in time;
+                    constant actual             : in time; 
+                    constant tolerance          : in real );                 
    procedure print_check( variable in_result         : inout check_result_type;
                           constant check_description : in string; 
                           constant expected          : in string;
                           constant actual            : in string;
                           constant tolerance         : in string );
+   procedure report_comment( constant description : in string );
 
    -- Declare public variables
    file results_file     : TEXT;
@@ -64,7 +72,6 @@ end package;
 -- Define package contents
 --=================================================================================================
 package body Sim_Utilities is
-
 
    -- Define Verification Stat protected shared variable type
    type verification_stat is protected body
@@ -216,6 +223,76 @@ package body Sim_Utilities is
 
 
    ----------------------------------------------------------------------
+   -- Check - Time Equality
+   --    Inputs: (check description string, expected time, actual time)
+   ----------------------------------------------------------------------
+   procedure check( constant check_description  : in string;
+                    constant expected           : in time;
+                    constant actual             : in time
+                  ) is
+   begin
+      -- Perform check
+      if (expected = actual) then
+         -- PASS result
+         check_result.set_pass;
+
+         -- Update verification stat counts accordingly
+         check_count.increment;
+         pass_count.increment;
+      else
+         -- FAIL result
+         check_result.set_fail;
+
+         -- Update verification stat counts accordingly
+         check_count.increment;
+         fail_count.increment;
+      end if;
+
+      -- Print check results
+      print_check(check_result, check_description, to_string(expected), to_string(actual), string'("N/A"));
+   end procedure;
+
+
+   ----------------------------------------------------------------------
+   -- Check - Time Equality with Tolerance
+   --    Inputs: (check description string, expected time, actual time, tolerance real)
+   ----------------------------------------------------------------------
+   procedure check( constant check_description  : in string;
+                    constant expected           : in time;
+                    constant actual             : in time;
+                    constant tolerance          : in real      -- example value: 0.05 for +/- 5%
+                  ) is
+      -- Local variables
+      variable lower_value : time;
+      variable upper_value : time;
+   begin
+      -- Calculate nominal range
+      lower_value := expected - (expected * tolerance);
+      upper_value := expected + (expected * tolerance);
+
+      -- Perform check
+      if (actual > lower_value AND actual < upper_value) then
+         -- PASS result
+         check_result.set_pass;
+
+         -- Update verification stat counts accordingly
+         check_count.increment;
+         pass_count.increment;
+      else
+         -- FAIL result
+         check_result.set_fail;
+
+         -- Update verification stat counts accordingly
+         check_count.increment;
+         fail_count.increment;
+      end if;
+
+      -- Print check results
+      print_check(check_result, check_description, to_string(expected), to_string(actual), ("+/- " & to_string(tolerance * 100.0) & "%"));
+   end procedure;
+
+
+   ----------------------------------------------------------------------
    -- Print Check Results
    ----------------------------------------------------------------------
    procedure print_check( variable in_result         : inout check_result_type;
@@ -226,10 +303,18 @@ package body Sim_Utilities is
                         ) is
       -- Internal variables
       variable temp_line   : LINE;
-      variable newline     : LINE;
       variable field_width : WIDTH;
+      variable check_description_formatted : string(1 to 116);
    begin
       file_open(results_file, "Test_Results.txt", APPEND_MODE);
+
+      -- Ensure that the description string is constrained to the correct field width
+      if (check_description'length > 116) then
+         check_description_formatted := check_description(1 to 116);
+      else
+         check_description_formatted := "                                                                                                                    ";
+         check_description_formatted(1 to check_description'length) := check_description;
+      end if;
 
       -- Build line according to test results table format
       field_width := 8;
@@ -239,7 +324,7 @@ package body Sim_Utilities is
       write(temp_line, in_result.get, LEFT, field_width);               -- PASS/FAIL
       write(temp_line, string'("  "));                                     --   2x spaces
       field_width := 116;
-      write(temp_line, check_description, LEFT, field_width);           -- Description
+      write(temp_line, check_description_formatted, LEFT, field_width); -- Description
       write(temp_line, string'("  "));                                     --   2x spaces
       field_width := 15;
       write(temp_line, expected, LEFT, field_width);                    -- Expected
@@ -253,7 +338,50 @@ package body Sim_Utilities is
 
       file_close(results_file);
    end procedure;
-   
+
+
+   ----------------------------------------------------------------------
+   -- Print Comment in Results File
+   ----------------------------------------------------------------------
+   procedure report_comment( constant description : in string ) is
+      -- Internal variables
+      variable temp_line   : LINE;
+      variable field_width : WIDTH;
+      variable description_formatted : string(1 to 116);
+   begin
+      file_open(results_file, "Test_Results.txt", APPEND_MODE);
+
+      -- Ensure that the description string is constrained to the correct field width
+      if (description'length > 116) then
+         description_formatted := description(1 to 116);
+      else
+         description_formatted := "                                                                                                                    ";
+         description_formatted(1 to description'length) := description;
+      end if;
+
+      -- Build line according to test results table format
+      field_width := 8;
+      write(temp_line, string'(""), LEFT, field_width);                 -- Check #
+      write(temp_line, string'("  "));                                     --   2x spaces
+      field_width := 10;
+      write(temp_line, string'(""), LEFT, field_width);                 -- PASS/FAIL
+      write(temp_line, string'("  "));                                     --   2x spaces
+      field_width := 116;
+      write(temp_line, description_formatted, LEFT, field_width);       -- Description
+      write(temp_line, string'("  "));                                     --   2x spaces
+      field_width := 15;
+      write(temp_line, string'(""), LEFT, field_width);                 -- Expected
+      write(temp_line, string'("  "));                                     --   2x spaces
+      field_width := 15;
+      write(temp_line, string'(""), LEFT, field_width);                 -- Actual
+      write(temp_line, string'("  "));                                     --   2x spaces
+      field_width := 25;
+      write(temp_line, string'(""), LEFT, field_width);                 -- Tolerance
+      writeline(results_file, temp_line);      
+
+      file_close(results_file);
+   end procedure;
+
 
 end package body;
 --=================================================================================================
