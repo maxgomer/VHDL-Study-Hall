@@ -85,6 +85,8 @@ vmap library1 work
 #==================================================================================================
 vcom -2008 ../../Simulation_Utilities/Simulation_Utilities.vhd
 vcom -2008 ../Design/LED_Button_Toggle.vhd
+vcom -2008 ../Design/Debounce_Filter.vhd
+vcom -2008 ../Design/LED_Toggle_Debounced_Top.vhd
 vcom -2008 TB_LED_Toggle_Debounced.vhd
 
 

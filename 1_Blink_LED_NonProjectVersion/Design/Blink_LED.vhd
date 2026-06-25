@@ -35,9 +35,16 @@ begin
 
             -- LED output must be toggled every 50E6 completed cycles of system clock
             -- in order to achieve 1 Hz output with 50% duty cycle. In other words,
-            -- LED must be toggled every 2 Hz.
+            -- LED must be toggled at a rate of 2 Hz.
             -- (100E6) / (50E6) = 2 Hz
-            if (RE_counter = (50E6 - 1)) then     -- 50E6-1 because we're counting pos edges not cycles
+            --
+            -- (50E6 - 1) is used because of the nature of how the counter is reset
+            -- and how one clock cycle will already have completed by the time the counter
+            -- reaches 1. However, this is NOT true for the very first counting cycle after
+            -- device power on, because the counter is already initialized to 0 before the
+            -- first clock edge is counted. As such, the very first LED OFF duration will be
+            -- shorter by 1 clock cycle, but this is acceptable.
+            if (RE_counter = (50E6 - 1)) then
                 clk_out_1hz <= not clk_out_1hz;   -- toggle 1 Hz clock edge
                 RE_counter <= 0;                  -- reset counter
             end if;

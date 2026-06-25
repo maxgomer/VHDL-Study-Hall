@@ -19,18 +19,18 @@ architecture Testbench of TB_LED_Toggle_Debounced is
    signal test_finished        : STD_LOGIC := '0';
 
    -- Declare internal components
-   component LED_Button_Toggle is
-      port( sys_clk_100mhz : IN STD_LOGIC;
-            button_input   : IN STD_LOGIC;
-            LED_out        : OUT STD_LOGIC );
-   end component LED_Button_Toggle;
+   component LED_Toggle_Debounced_Top is
+      port( sys_clk_100mhz   : IN  STD_LOGIC;
+            raw_button_input : IN  STD_LOGIC;
+            LED_out          : OUT STD_LOGIC );
+   end component LED_Toggle_Debounced_Top;
 begin
 
    -- Instantiate UUT
-   UUT : LED_Button_Toggle
-   port map( sys_clk_100mhz => virtual_clk_100mhz,
-             button_input   => sim_button_input,
-             LED_out        => sim_LED_out );
+   UUT : LED_Toggle_Debounced_Top
+   port map( sys_clk_100mhz   => virtual_clk_100mhz,
+             raw_button_input => sim_button_input,
+             LED_out          => sim_LED_out );
 
    -- Generate system clock
    Clock_Gen : process begin
@@ -50,10 +50,20 @@ begin
       sim_button_input <= '0';
       wait for 10 ns;
       sim_button_input <= '1';
+      wait for 20 ms;
+
+      sim_button_input <= '0';
       wait for 10 ns;
+      sim_button_input <= '1';
+      wait for 10 ns;
+      sim_button_input <= '0';
+      wait for 10 ns;
+      sim_button_input <= '1';
+      wait for 10 ns;
+      sim_button_input <= '0';
+      wait for 20 ms;
       
       test_finished <= '1';
-
    end process;
 
 end architecture Testbench;
