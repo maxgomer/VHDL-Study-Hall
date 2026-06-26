@@ -10,22 +10,22 @@ z2
 cModel Technology
 Z0 dC:/CM/VHDL_Study_Hall/2_LED_Toggle_Debounced/Simulation
 Edebounce_filter
-Z1 w1782421061
+Z1 w1782495894
 Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
-!i122 82
+!i122 224
 R0
 Z4 8../Design/Debounce_Filter.vhd
 Z5 F../Design/Debounce_Filter.vhd
 l0
-L9 1
-VDY3D^KlA6oX5iCDo]e6650
-!s100 m7keCEeA^cB_`SV8BKmdm0
+L12 1
+VgPQ3ikn20EOX@10kiiAR40
+!s100 0_<6Eo@_>Uf0ZZkZVk`942
 Z6 OV;C;2020.1;71
 33
-Z7 !s110 1782424782
+Z7 !s110 1782509333
 !i10b 1
-Z8 !s108 1782424782.000000
+Z8 !s108 1782509333.000000
 Z9 !s90 -reportprogress|300|-2008|../Design/Debounce_Filter.vhd|
 Z10 !s107 ../Design/Debounce_Filter.vhd|
 !i113 1
@@ -34,12 +34,12 @@ Z12 tExplicit 1 CvgOpt 0
 Artl
 R2
 R3
-DEx4 work 15 debounce_filter 0 22 DY3D^KlA6oX5iCDo]e6650
-!i122 82
-l27
-L23 36
-VES0UZOmaI0>J5VWAkjNNX2
-!s100 Uijz;a_ZA2BD?R1Y?XK?71
+DEx4 work 15 debounce_filter 0 22 gPQ3ikn20EOX@10kiiAR40
+!i122 224
+l30
+L26 36
+V98[S:P1Zh^F8cV]A_hU^20
+!s100 0:_Fb7a^9e_fiQ^^<hP[H3
 R6
 33
 R7
@@ -51,17 +51,17 @@ R10
 R11
 R12
 Eled_button_toggle
-Z13 w1782334321
+Z13 w1782507073
 R2
 R3
-!i122 81
+!i122 223
 R0
 Z14 8../Design/LED_Button_Toggle.vhd
 Z15 F../Design/LED_Button_Toggle.vhd
 l0
-L9 1
-V>em?6V[<`3jFeD_1WNO_c2
-!s100 7nRBC=LiUl;?bLI6:8>^H2
+L11 1
+VF[mRl0i2eR7WEaE2lf@QM0
+!s100 d>Z:B?@deYR2n@aK;31Gj1
 R6
 33
 R7
@@ -75,12 +75,12 @@ R12
 Artl
 R2
 R3
-DEx4 work 17 led_button_toggle 0 22 >em?6V[<`3jFeD_1WNO_c2
-!i122 81
-l22
-L18 24
-VfL]WJR9@BY`kS7Hhm;Ch71
-!s100 GkPcmE=@Vc@FR^EM^Y?_L3
+DEx4 work 17 led_button_toggle 0 22 F[mRl0i2eR7WEaE2lf@QM0
+!i122 223
+l24
+L20 24
+V[Nm8TB[IaY`[gjJoPojOD2
+!s100 K>7hCk^g41oE2]46fHHSB2
 R6
 33
 R7
@@ -92,130 +92,138 @@ R17
 R11
 R12
 Eled_toggle_debounced_top
-Z18 w1782419890
+Z18 w1782495915
 R2
 R3
-!i122 83
+!i122 225
 R0
 Z19 8../Design/LED_Toggle_Debounced_Top.vhd
 Z20 F../Design/LED_Toggle_Debounced_Top.vhd
 l0
 L9 1
-V4G]DA;CF]k`1;G_Wg]8_e0
-!s100 N9F>RjbBziYiX_@CZQWkX1
+VVzg2>lL5ZzEHlJ5SHY12S2
+!s100 __A=<i`d4b6OdncLFVjOI2
 R6
 33
-R7
+Z21 !s110 1782509334
 !i10b 1
 R8
-Z21 !s90 -reportprogress|300|-2008|../Design/LED_Toggle_Debounced_Top.vhd|
-Z22 !s107 ../Design/LED_Toggle_Debounced_Top.vhd|
+Z22 !s90 -reportprogress|300|-2008|../Design/LED_Toggle_Debounced_Top.vhd|
+Z23 !s107 ../Design/LED_Toggle_Debounced_Top.vhd|
 !i113 1
 R11
 R12
 Artl
 R2
 R3
-DEx4 work 24 led_toggle_debounced_top 0 22 4G]DA;CF]k`1;G_Wg]8_e0
-!i122 83
+DEx4 work 24 led_toggle_debounced_top 0 22 Vzg2>lL5ZzEHlJ5SHY12S2
+!i122 225
 l36
 L17 37
-VYHe>goPQOJY2SR6JVI0202
-!s100 CflH4;<lclfC]Bfi^dMTR2
+VPh=TlT>3Zkhl=NgLl=5`C1
+!s100 K=Ta9SiSnQKjDID<a3zeW1
 R6
 33
-R7
+R21
 !i10b 1
 R8
-R21
 R22
+R23
 !i113 1
 R11
 R12
 Psim_utilities
-Z23 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
-Z24 DPx4 ieee 16 std_logic_textio 0 22 ^l:n6VFdg74Q?CKDhjD]D3
+Z24 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z25 DPx4 ieee 16 std_logic_textio 0 22 ^l:n6VFdg74Q?CKDhjD]D3
 R2
 R3
-!i122 80
-Z25 w1781641606
+!i122 222
+Z26 w1782504254
 R0
-Z26 8../../Simulation_Utilities/Simulation_Utilities.vhd
-Z27 F../../Simulation_Utilities/Simulation_Utilities.vhd
+Z27 8../../Simulation_Utilities/Simulation_Utilities.vhd
+Z28 F../../Simulation_Utilities/Simulation_Utilities.vhd
 l0
 L23 1
-V8<DjYS8baWQ@COPd4TRiI3
-!s100 m>Ak]L_3dW8I[:g0TNlb`0
+VIhfijTE_7fgReD4mGo^O>0
+!s100 PY5C1dK@WOVXKk=z;1EWR1
 R6
 33
 b1
 R7
 !i10b 1
-Z28 !s108 1782424781.000000
+R8
 Z29 !s90 -reportprogress|300|-2008|../../Simulation_Utilities/Simulation_Utilities.vhd|
 Z30 !s107 ../../Simulation_Utilities/Simulation_Utilities.vhd|
 !i113 1
 R11
 R12
 Bbody
-DPx4 work 13 sim_utilities 0 22 8<DjYS8baWQ@COPd4TRiI3
-R23
+Z31 DPx4 work 13 sim_utilities 0 22 IhfijTE_7fgReD4mGo^O>0
 R24
+R25
 R2
 R3
-!i122 80
+!i122 222
 l0
-L74 1
-V0<1_o`lf`ffL26iAih7;E3
-!s100 zT@jEjnc9IJElnUj[gLLE0
+L81 1
+VbEG>2I2?2aTG=EM=zW2;N2
+!s100 3Y@delBV:4_CS83@lMfPZ2
 R6
 33
 R7
 !i10b 1
-R28
+R8
 R29
 R30
 !i113 1
 R11
 R12
 Etb_led_toggle_debounced
-Z31 w1782424775
+Z32 w1782509314
+Z33 DPx12 modelsim_lib 4 util 0 22 I9VUm]?fD[2nYZzgoDM?l2
+R24
+R25
+R31
 R2
 R3
-!i122 84
+!i122 226
 R0
-Z32 8TB_LED_Toggle_Debounced.vhd
-Z33 FTB_LED_Toggle_Debounced.vhd
+Z34 8TB_LED_Toggle_Debounced.vhd
+Z35 FTB_LED_Toggle_Debounced.vhd
 l0
-L9 1
-VP2360M[aAfA6ZHOH0V_kf3
-!s100 >Kg;DH_K6Ucd:K@2HPi8D2
+L63 1
+V:hzgBFzf@kmM?@G=Z=<h_0
+!s100 K5WI:B`iOgJ16HGeUPziU3
 R6
 33
-R7
+R21
 !i10b 1
-R8
-Z34 !s90 -reportprogress|300|-2008|TB_LED_Toggle_Debounced.vhd|
-Z35 !s107 TB_LED_Toggle_Debounced.vhd|
+Z36 !s108 1782509334.000000
+Z37 !s90 -reportprogress|300|-2008|TB_LED_Toggle_Debounced.vhd|
+Z38 !s107 TB_LED_Toggle_Debounced.vhd|
 !i113 1
 R11
 R12
 Atestbench
+R33
+R24
+R25
+R31
 R2
 R3
-Z36 DEx4 work 23 tb_led_toggle_debounced 0 22 P2360M[aAfA6ZHOH0V_kf3
-!i122 84
-l27
-L13 59
-V;?@U^2:Q0W150=QS3@X;K1
-!s100 N2GcmJBi;Q=5;cBfJ9=9R2
+Z39 DEx4 work 23 tb_led_toggle_debounced 0 22 :hzgBFzf@kmM?@G=Z=<h_0
+!i122 226
+l88
+L67 265
+VjB2dFdU0>h;mAkNK1bnz02
+!s100 iV2Hz8k340G0[I>fN1iOY0
 R6
 33
-R7
+R21
 !i10b 1
-R8
-R34
-R35
+R36
+R37
+R38
 !i113 1
 R11
 R12

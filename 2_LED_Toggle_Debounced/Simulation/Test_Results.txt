@@ -3,8 +3,44 @@ Verification Test Results
 =======================================================================================================================================================================================================
 
 Test Name: LED_Toggle_Debounced
-Test Date: 2026-06-25 17:59:41
+Test Date: 2026-06-26 17:28:53
 
 Check # | Pass/Fail | Description                                                                                                         | Expected       | Actual         | Tolerance                
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Test Elapsed Time = 0 hours : 0 minutes : 8 seconds
+                      Section - Check 1                                                                                                                                                                
+1         PASS        Initial value of raw button input = 0                                                                                 0                0                N/A                      
+2         PASS        Initial value of filtered button output = 0                                                                           0                0                N/A                      
+3         PASS        CHECK 1: Verify filtered button output sets to '1' after raw button input is stable for 10 ms (+ 10 ns tolerance)     NA               10000005 ns      [ 10000000 ns, 10000010 ns ]
+                                                                                                                                                                                                       
+                      Section - Check 2                                                                                                                                                                
+4         PASS        Initial value of raw button input = 1                                                                                 1                1                N/A                      
+5         PASS        Initial value of filtered button output = 1                                                                           1                1                N/A                      
+6         PASS        CHECK 2: Verify filtered button output sets to '0' after raw button input is stable for 10 ms (+ 10 ns tolerance)     NA               10000000 ns      [ 10000000 ns, 10000010 ns ]
+                                                                                                                                                                                                       
+                      Section - Check 3                                                                                                                                                                
+7         PASS        Initial value of LED output = 0                                                                                       0                0                N/A                      
+8         PASS        Initial value of raw button input = 0                                                                                 0                0                N/A                      
+9         PASS        CHECK 3: Verify LED output stays at '0' on immediate RE of sys clock after filt button out goes from '0' -> '1'       0                0                N/A                      
+                                                                                                                                                                                                       
+                      Section - Check 4                                                                                                                                                                
+10        PASS        Initial value of LED output = 0                                                                                       0                0                N/A                      
+11        PASS        Initial value of raw button input = 1                                                                                 1                1                N/A                      
+12        PASS        CHECK 4: Verify LED output sets to '1' on immediate RE of sys clock after filt button out goes from '1' -> '0'        70000195 ns      70000195 ns      N/A                      
+                                                                                                                                                                                                       
+                      Section - Check 5                                                                                                                                                                
+13        PASS        Initial value of LED output = 1                                                                                       1                1                N/A                      
+14        PASS        Initial value of raw button input = 0                                                                                 0                0                N/A                      
+15        PASS        CHECK 5: Verify LED output stays at '1' on immediate RE of sys clock after filt button out goes from '0' -> '1'       1                1                N/A                      
+                                                                                                                                                                                                       
+                      Section - Check 6                                                                                                                                                                
+16        PASS        Initial value of LED output = 1                                                                                       1                1                N/A                      
+17        PASS        Initial value of raw button input = 1                                                                                 1                1                N/A                      
+18        PASS        CHECK 6: Verify LED output sets to '0' on immediate RE of sys clock after filt button out goes from '1' -> '0'        90000295 ns      90000295 ns      N/A                      
+                                                                                                                                                                                                       
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Results Summary:
+   Total PASS: 18 / 18
+   Total FAIL: 0
+
+Test Elapsed Time = 0 hours : 0 minutes : 16 seconds

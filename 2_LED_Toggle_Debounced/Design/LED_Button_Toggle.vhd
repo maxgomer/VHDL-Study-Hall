@@ -1,8 +1,10 @@
 
+-- This module toggles an LED output on the immediate next Rising Edge
+-- of the system clock after the falling edge of a button input.
 
 -- Declare Headers
 library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;  -- Required for use of STD_LOGIC_VECTOR type
+use IEEE.STD_LOGIC_1164.ALL;  -- Required for use of STD_LOGIC type
 
 
 -- Entity declaration

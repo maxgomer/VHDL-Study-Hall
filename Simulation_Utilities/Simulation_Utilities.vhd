@@ -39,19 +39,26 @@ package Sim_Utilities is
    -- Declare function and procedure prototypes
    procedure setup_verification_stats;
    procedure finish_results_file;
-   procedure check( constant check_description  : in string;
-                    constant expected           : in bit;
-                    constant actual             : in bit );
-   procedure check( constant check_description  : in string;
-                    constant expected           : in integer;
-                    constant actual             : in integer );
-   procedure check( constant check_description  : in string;
-                    constant expected           : in time;
-                    constant actual             : in time );
-   procedure check( constant check_description  : in string;
-                    constant expected           : in time;
-                    constant actual             : in time; 
-                    constant tolerance          : in real );                 
+   procedure check( constant check_description    : in string;
+                    constant expected             : in bit;
+                    constant actual               : in bit );
+   procedure check( constant check_description    : in string;
+                    constant expected             : in STD_LOGIC;
+                    constant actual               : in STD_LOGIC );                 
+   procedure check( constant check_description    : in string;
+                    constant expected             : in integer;
+                    constant actual               : in integer );
+   procedure check( constant check_description    : in string;
+                    constant expected             : in time;
+                    constant actual               : in time );
+   procedure check( constant check_description    : in string;
+                    constant expected             : in time;
+                    constant actual               : in time; 
+                    constant tolerance            : in real );
+   procedure check( constant check_description    : in string;
+                    constant expected_lower_limit : in time;
+                    constant expected_upper_limit : in time;
+                    constant actual               : in time );                 
    procedure print_check( variable in_result         : inout check_result_type;
                           constant check_description : in string; 
                           constant expected          : in string;
@@ -192,7 +199,38 @@ package body Sim_Utilities is
 
 
    ----------------------------------------------------------------------
-   -- Check - Bit Equality
+   -- Check - STD_LOGIC Equality
+   --    Inputs: (check description string, expected STD_LOGIC, actual STD_LOGIC)
+   ----------------------------------------------------------------------
+   procedure check( constant check_description  : in string;
+                    constant expected           : in STD_LOGIC;
+                    constant actual             : in STD_LOGIC
+                  ) is
+   begin
+      -- Perform check
+      if (expected = actual) then
+         -- PASS result
+         check_result.set_pass;
+
+         -- Update verification stat counts accordingly
+         check_count.increment;
+         pass_count.increment;
+      else
+         -- FAIL result
+         check_result.set_fail;
+
+         -- Update verification stat counts accordingly
+         check_count.increment;
+         fail_count.increment;
+      end if;
+
+      -- Print check results
+      print_check(check_result, check_description, to_string(expected), to_string(actual), string'("N/A"));
+   end procedure;
+
+
+   ----------------------------------------------------------------------
+   -- Check - Integer Equality
    --    Inputs: (check description string, expected integer, actual integer)
    ----------------------------------------------------------------------
    procedure check( constant check_description  : in string;
@@ -289,6 +327,40 @@ package body Sim_Utilities is
 
       -- Print check results
       print_check(check_result, check_description, to_string(expected), to_string(actual), ("+/- " & to_string(tolerance * 100.0) & "%"));
+   end procedure;
+
+
+   ----------------------------------------------------------------------
+   -- Check - Time Within Upper and Lower Bounds
+   --    Inputs: (check description string, expected lower limit time,
+   --             expected upper limit time, actual time)
+   ----------------------------------------------------------------------
+   procedure check( constant check_description    : in string;
+                    constant expected_lower_limit : in time;
+                    constant expected_upper_limit : in time;
+                    constant actual               : in time
+                  ) is
+   begin
+      
+      -- Perform check
+      if (actual >= expected_lower_limit AND actual <= expected_upper_limit) then
+         -- PASS result
+         check_result.set_pass;
+
+         -- Update verification stat counts accordingly
+         check_count.increment;
+         pass_count.increment;
+      else
+         -- FAIL result
+         check_result.set_fail;
+
+         -- Update verification stat counts accordingly
+         check_count.increment;
+         fail_count.increment;
+      end if;
+
+      -- Print check results
+      print_check(check_result, check_description, "N/A", to_string(actual), ("[ " & to_string(expected_lower_limit) & ", " & to_string(expected_upper_limit) & " ]"));
    end procedure;
 
 

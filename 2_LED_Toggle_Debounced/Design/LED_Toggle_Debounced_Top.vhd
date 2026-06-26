@@ -2,7 +2,7 @@
 
 -- Declare headers
 library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;  -- Required for STD_LOGIC_VECTOR type
+use IEEE.STD_LOGIC_1164.ALL;  -- Required for STD_LOGIC type
 
 
 -- Declare entity

@@ -25,6 +25,11 @@ set build_output_path    C:/CM/VHDL_Study_Hall/1_Blink_LED_NonProjectVersion/Bui
 # Create output folder at specified path if it does not already exist
 file mkdir $build_output_path
 
+# Remove existing files from Vivado project (if they exist).
+# This is done in order to make sure that any old source files that are associated with the 
+# currently open Vivado project are cleared out before the new source files are added.
+remove_files [get_files]
+
 
 # -------------------------------------------------------------------------------------------------
 # STEP 1

@@ -1,8 +1,11 @@
 
+-- This module takes the raw button input, which has natural bounce, and waits
+-- until the input has stabilized for the specified amount of time before updating
+-- the filtered button output.
 
 -- Declare headers
 library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;  -- Required for use of STD_LOGIC_VECTOR type
+use IEEE.STD_LOGIC_1164.ALL;  -- Required for use of STD_LOGIC type
 
 
 -- Declare entity
