@@ -1,0 +1,148 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Fri Jun 26 13:15:38 2026
+| Host         : DESKTOP-3778IF0 running 64-bit major release  (build 9200)
+| Command      : report_timing -sort_by group -max_paths 100 -path_type summary -file C:/CM/VHDL_Study_Hall/2_LED_Toggle_Debounced/Build_Results/post_route_timing.rpt
+| Design       : LED_Toggle_Debounced_Top
+| Device       : 7a100t-csg324
+| Speed File   : -1  PRODUCTION 1.23 2018-06-13
+| Design State : Routed
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Report
+
+Startpoint                     Endpoint                       Slack(ns)     
+----------------------------------------------------------------------------
+Debounce_Filter_Inst/debounce_clk_counter_reg[7]/C
+                               Debounce_Filter_Inst/debounce_clk_counter_reg[0]/R
+                                                              5.310         
+Debounce_Filter_Inst/debounce_clk_counter_reg[7]/C
+                               Debounce_Filter_Inst/debounce_clk_counter_reg[1]/R
+                                                              5.310         
+Debounce_Filter_Inst/debounce_clk_counter_reg[7]/C
+                               Debounce_Filter_Inst/debounce_clk_counter_reg[2]/R
+                                                              5.310         
+Debounce_Filter_Inst/debounce_clk_counter_reg[7]/C
+                               Debounce_Filter_Inst/debounce_clk_counter_reg[3]/R
+                                                              5.310         
+Debounce_Filter_Inst/debounce_clk_counter_reg[7]/C
+                               Debounce_Filter_Inst/debounce_clk_counter_reg[4]/R
+                                                              5.613         
+Debounce_Filter_Inst/debounce_clk_counter_reg[7]/C
+                               Debounce_Filter_Inst/debounce_clk_counter_reg[5]/R
+                                                              5.613         
+Debounce_Filter_Inst/debounce_clk_counter_reg[7]/C
+                               Debounce_Filter_Inst/debounce_clk_counter_reg[6]/R
+                                                              5.613         
+Debounce_Filter_Inst/debounce_clk_counter_reg[7]/C
+                               Debounce_Filter_Inst/debounce_clk_counter_reg[7]/R
+                                                              5.613         
+Debounce_Filter_Inst/debounce_clk_counter_reg[7]/C
+                               Debounce_Filter_Inst/debounce_clk_counter_reg[12]/R
+                                                              5.710         
+Debounce_Filter_Inst/debounce_clk_counter_reg[7]/C
+                               Debounce_Filter_Inst/debounce_clk_counter_reg[13]/R
+                                                              5.710         
+Debounce_Filter_Inst/debounce_clk_counter_reg[7]/C
+                               Debounce_Filter_Inst/debounce_clk_counter_reg[14]/R
+                                                              5.710         
+Debounce_Filter_Inst/debounce_clk_counter_reg[7]/C
+                               Debounce_Filter_Inst/debounce_clk_counter_reg[15]/R
+                                                              5.710         
+Debounce_Filter_Inst/debounce_clk_counter_reg[7]/C
+                               Debounce_Filter_Inst/debounce_clk_counter_reg[10]/R
+                                                              5.738         
+Debounce_Filter_Inst/debounce_clk_counter_reg[7]/C
+                               Debounce_Filter_Inst/debounce_clk_counter_reg[11]/R
+                                                              5.738         
+Debounce_Filter_Inst/debounce_clk_counter_reg[7]/C
+                               Debounce_Filter_Inst/debounce_clk_counter_reg[8]/R
+                                                              5.738         
+Debounce_Filter_Inst/debounce_clk_counter_reg[7]/C
+                               Debounce_Filter_Inst/debounce_clk_counter_reg[9]/R
+                                                              5.738         
+Debounce_Filter_Inst/debounce_clk_counter_reg[7]/C
+                               Debounce_Filter_Inst/debounce_clk_counter_reg[16]/R
+                                                              5.991         
+Debounce_Filter_Inst/debounce_clk_counter_reg[7]/C
+                               Debounce_Filter_Inst/debounce_clk_counter_reg[17]/R
+                                                              5.991         
+Debounce_Filter_Inst/debounce_clk_counter_reg[7]/C
+                               Debounce_Filter_Inst/debounce_clk_counter_reg[18]/R
+                                                              5.991         
+Debounce_Filter_Inst/debounce_clk_counter_reg[7]/C
+                               Debounce_Filter_Inst/debounce_clk_counter_reg[19]/R
+                                                              5.991         
+Debounce_Filter_Inst/debounce_clk_counter_reg[6]/C
+                               Debounce_Filter_Inst/r_button_filt_reg/CE
+                                                              6.136         
+Debounce_Filter_Inst/debounce_clk_counter_reg[1]/C
+                               Debounce_Filter_Inst/debounce_clk_counter_reg[17]/D
+                                                              7.643         
+Debounce_Filter_Inst/debounce_clk_counter_reg[1]/C
+                               Debounce_Filter_Inst/debounce_clk_counter_reg[19]/D
+                                                              7.664         
+Debounce_Filter_Inst/debounce_clk_counter_reg[1]/C
+                               Debounce_Filter_Inst/debounce_clk_counter_reg[18]/D
+                                                              7.738         
+Debounce_Filter_Inst/debounce_clk_counter_reg[1]/C
+                               Debounce_Filter_Inst/debounce_clk_counter_reg[16]/D
+                                                              7.754         
+Debounce_Filter_Inst/debounce_clk_counter_reg[1]/C
+                               Debounce_Filter_Inst/debounce_clk_counter_reg[13]/D
+                                                              7.757         
+Debounce_Filter_Inst/debounce_clk_counter_reg[1]/C
+                               Debounce_Filter_Inst/debounce_clk_counter_reg[15]/D
+                                                              7.778         
+Debounce_Filter_Inst/debounce_clk_counter_reg[1]/C
+                               Debounce_Filter_Inst/debounce_clk_counter_reg[14]/D
+                                                              7.852         
+Debounce_Filter_Inst/debounce_clk_counter_reg[1]/C
+                               Debounce_Filter_Inst/debounce_clk_counter_reg[12]/D
+                                                              7.868         
+Debounce_Filter_Inst/debounce_clk_counter_reg[1]/C
+                               Debounce_Filter_Inst/debounce_clk_counter_reg[9]/D
+                                                              7.872         
+Debounce_Filter_Inst/debounce_clk_counter_reg[1]/C
+                               Debounce_Filter_Inst/debounce_clk_counter_reg[11]/D
+                                                              7.893         
+Debounce_Filter_Inst/debounce_clk_counter_reg[1]/C
+                               Debounce_Filter_Inst/debounce_clk_counter_reg[10]/D
+                                                              7.967         
+Debounce_Filter_Inst/debounce_clk_counter_reg[1]/C
+                               Debounce_Filter_Inst/debounce_clk_counter_reg[8]/D
+                                                              7.983         
+Debounce_Filter_Inst/debounce_clk_counter_reg[1]/C
+                               Debounce_Filter_Inst/debounce_clk_counter_reg[5]/D
+                                                              7.987         
+Debounce_Filter_Inst/debounce_clk_counter_reg[1]/C
+                               Debounce_Filter_Inst/debounce_clk_counter_reg[7]/D
+                                                              8.008         
+Debounce_Filter_Inst/debounce_clk_counter_reg[1]/C
+                               Debounce_Filter_Inst/debounce_clk_counter_reg[6]/D
+                                                              8.082         
+Debounce_Filter_Inst/debounce_clk_counter_reg[1]/C
+                               Debounce_Filter_Inst/debounce_clk_counter_reg[4]/D
+                                                              8.098         
+Debounce_Filter_Inst/debounce_clk_counter_reg[1]/C
+                               Debounce_Filter_Inst/debounce_clk_counter_reg[3]/D
+                                                              8.257         
+Debounce_Filter_Inst/debounce_clk_counter_reg[1]/C
+                               Debounce_Filter_Inst/debounce_clk_counter_reg[2]/D
+                                                              8.317         
+Debounce_Filter_Inst/debounce_clk_counter_reg[0]/C
+                               Debounce_Filter_Inst/debounce_clk_counter_reg[1]/D
+                                                              8.502         
+Debounce_Filter_Inst/debounce_clk_counter_reg[0]/C
+                               Debounce_Filter_Inst/debounce_clk_counter_reg[0]/D
+                                                              8.679         
+Debounce_Filter_Inst/r_button_filt_reg/C
+                               LED_Button_Toggle_Inst/r_LED_status_reg/D
+                                                              8.742         
+Debounce_Filter_Inst/r_button_filt_reg/C
+                               LED_Button_Toggle_Inst/r_button_status_reg/D
+                                                              8.843         
+
+
+

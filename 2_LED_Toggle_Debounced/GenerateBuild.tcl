@@ -19,7 +19,7 @@ set design_name          "LED_Toggle_Debounced"
 set top_module_name      "LED_Toggle_Debounced_Top"
 set FPGA_part            "xc7a100tcsg324-1"
 set VHDL_design_path     C:/CM/VHDL_Study_Hall/2_LED_Toggle_Debounced/Design/
-set constraint_path      C:/CM/VHDL_Study_Hall/2_LED_Toggle_Debounced/Constraints/Blink_LED.xdc
+set constraint_path      C:/CM/VHDL_Study_Hall/2_LED_Toggle_Debounced/Constraints/$design_name.xdc
 set build_output_path    C:/CM/VHDL_Study_Hall/2_LED_Toggle_Debounced/Build_Results
 
 # Create output folder at specified path if it does not already exist

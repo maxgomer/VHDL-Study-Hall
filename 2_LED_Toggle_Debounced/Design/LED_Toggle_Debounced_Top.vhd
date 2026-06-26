@@ -7,9 +7,9 @@ use IEEE.STD_LOGIC_1164.ALL;  -- Required for STD_LOGIC_VECTOR type
 
 -- Declare entity
 entity LED_Toggle_Debounced_Top is
-   port( sys_clk_100mhz   : IN  STD_LOGIC; 
-         raw_button_input : IN  STD_LOGIC;
-         LED_out          : OUT STD_LOGIC );
+   port( sys_clk_100mhz   : IN  STD_LOGIC;
+         BTNC             : IN  STD_LOGIC;
+         LED              : OUT STD_LOGIC );
 end entity LED_Toggle_Debounced_Top;
 
 
@@ -42,12 +42,12 @@ begin
       -- 10ms = 1000000 clock cycles
       generic map( DEBOUNCE_CLK_CNT => 1000000 )
       port map( sys_clk_100mhz   => sys_clk_100mhz,
-                raw_button_input => raw_button_input,
+                raw_button_input => BTNC,
                 button_out_filt  => w_button_state_filt );
 
    LED_Button_Toggle_Inst : LED_Button_Toggle
       port map( sys_clk_100mhz => sys_clk_100mhz,
                 button_input   => w_button_state_filt,
-                LED_out        => LED_out );
+                LED_out        => LED );
 
 end architecture RTL;
