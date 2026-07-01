@@ -9,8 +9,8 @@
 # https://ww1.microchip.com/downloads/aemDocuments/documents/FPGA/swdocs/modelsim/modelsim_tut_2024_2.pdf
 
 
-set test_name "Mux"
-set test_results_file_name "Test_Results_Mux.txt"
+set test_name "Multiplexer"
+set test_results_file_name "Test_Results.txt"
 set test_start_time [clock seconds]
 set test_date_formatted [clock format $test_start_time -format "%Y-%m-%d %H:%M:%S"]
 

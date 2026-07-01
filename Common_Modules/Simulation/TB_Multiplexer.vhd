@@ -64,6 +64,7 @@ begin
       sim_data_sel <= "11";
       wait for 10 ns;
 
+      report_comment("Formal verification not performed for this module, visual inspection of testbench results only.");
       finish_results_file;
       test_finished <= '1';
    end process;
