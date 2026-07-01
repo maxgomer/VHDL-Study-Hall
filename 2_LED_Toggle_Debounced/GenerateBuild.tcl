@@ -35,7 +35,7 @@ remove_files [get_files]
 # STEP 1
 #    Read design sources and constraint files.
 # -------------------------------------------------------------------------------------------------
-#NOTE: The "glob" command is used to return a list of files at the specified path.
+# NOTE: The "glob" command is used to return a list of files at the specified path.
 read_vhdl                [ glob $VHDL_design_path/*.vhd ]
 read_xdc                 $constraint_path
 
