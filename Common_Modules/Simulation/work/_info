@@ -9,28 +9,69 @@ z2
 !i10f 100
 cModel Technology
 Z0 dC:/CM/VHDL_Study_Hall/Common_Modules/Simulation
-Emux
-Z1 w1782924775
+Edemultiplexer
+Z1 w1782934948
 Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 78
+R0
+Z4 8../Design/Demultiplexer.vhd
+Z5 F../Design/Demultiplexer.vhd
+l0
+L7 1
+V=;oN`eKU^II:3XVhM`?A51
+!s100 [ke]FB;=`dkcL3BMPn<[T2
+Z6 OV;C;2020.1;71
+33
+Z7 !s110 1782934953
+!i10b 1
+Z8 !s108 1782934953.000000
+Z9 !s90 -reportprogress|300|-2008|../Design/Demultiplexer.vhd|
+Z10 !s107 ../Design/Demultiplexer.vhd|
+!i113 1
+Z11 o-2008
+Z12 tExplicit 1 CvgOpt 0
+Artl
+R2
+R3
+DEx4 work 13 demultiplexer 0 22 =;oN`eKU^II:3XVhM`?A51
+!i122 78
+l20
+L18 10
+ViDdcM=hYeLoDd6kam8h_G2
+!s100 YR@KfSeR:0CeCcE;[Va]W3
+R6
+33
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Emux
+Z13 w1782924775
+R2
+R3
 !i122 51
 R0
-Z4 8../Design/Multiplexer.vhd
-Z5 F../Design/Multiplexer.vhd
+Z14 8../Design/Multiplexer.vhd
+Z15 F../Design/Multiplexer.vhd
 l0
-Z6 L10 1
+Z16 L10 1
 VX<<mJQ:66h8n?JQI<YRj[0
 !s100 2>5ag2S:XQUGG5LgjZkIm3
-Z7 OV;C;2020.1;71
+R6
 33
-Z8 !s110 1782933004
+Z17 !s110 1782933004
 !i10b 1
-Z9 !s108 1782933004.000000
-Z10 !s90 -reportprogress|300|-2008|../Design/Multiplexer.vhd|
-Z11 !s107 ../Design/Multiplexer.vhd|
+Z18 !s108 1782933004.000000
+Z19 !s90 -reportprogress|300|-2008|../Design/Multiplexer.vhd|
+Z20 !s107 ../Design/Multiplexer.vhd|
 !i113 1
-Z12 o-2008
-Z13 tExplicit 1 CvgOpt 0
+R11
+R12
 Artl
 R2
 R3
@@ -40,138 +81,185 @@ l24
 L22 9
 V64Cz]6Uz6;6g^DdSa`9>o2
 !s100 S^0nGd5cMnAOR3AY;31if0
-R7
+R6
 33
-R8
+R17
 !i10b 1
-R9
-R10
-R11
+R18
+R19
+R20
 !i113 1
+R11
 R12
-R13
 Psim_utilities
-Z14 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
-Z15 DPx4 ieee 16 std_logic_textio 0 22 ^l:n6VFdg74Q?CKDhjD]D3
+Z21 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z22 DPx4 ieee 16 std_logic_textio 0 22 ^l:n6VFdg74Q?CKDhjD]D3
 R2
 R3
-!i122 50
-Z16 w1782932910
+!i122 77
+Z23 w1782932910
 R0
-Z17 8../../Simulation_Utilities/Simulation_Utilities.vhd
-Z18 F../../Simulation_Utilities/Simulation_Utilities.vhd
+Z24 8../../Simulation_Utilities/Simulation_Utilities.vhd
+Z25 F../../Simulation_Utilities/Simulation_Utilities.vhd
 l0
 L23 1
 VIhfijTE_7fgReD4mGo^O>0
 !s100 PY5C1dK@WOVXKk=z;1EWR1
-R7
+R6
 33
 b1
-R8
+R7
 !i10b 1
-R9
-Z19 !s90 -reportprogress|300|-2008|../../Simulation_Utilities/Simulation_Utilities.vhd|
-Z20 !s107 ../../Simulation_Utilities/Simulation_Utilities.vhd|
+R8
+Z26 !s90 -reportprogress|300|-2008|../../Simulation_Utilities/Simulation_Utilities.vhd|
+Z27 !s107 ../../Simulation_Utilities/Simulation_Utilities.vhd|
 !i113 1
+R11
 R12
-R13
 Bbody
-Z21 DPx4 work 13 sim_utilities 0 22 IhfijTE_7fgReD4mGo^O>0
-R14
-R15
+Z28 DPx4 work 13 sim_utilities 0 22 IhfijTE_7fgReD4mGo^O>0
+R21
+R22
 R2
 R3
-!i122 50
+!i122 77
 l0
 L81 1
 VJ2Qj]Ni;H4]@[fFd`fBcJ2
 !s100 j<?:f8bLVXf5YMPd[O52<0
-R7
+R6
 33
-R8
+R7
 !i10b 1
-R9
-R19
-R20
+R8
+R26
+R27
 !i113 1
+R11
 R12
-R13
-Etb_multiplexer
-Z22 w1782924986
-R14
-R15
+Etb_demultiplexer
+Z29 w1782934734
 R21
+R22
+R28
+R2
+R3
+!i122 79
+R0
+Z30 8TB_Demultiplexer.vhd
+Z31 FTB_Demultiplexer.vhd
+l0
+R16
+VdP@o:9ejG4PDg9Toz7dNF0
+!s100 e8m@IBQzazhCBVV^>ZJDU2
+R6
+33
+R7
+!i10b 1
+R8
+Z32 !s90 -reportprogress|300|-2008|TB_Demultiplexer.vhd|
+Z33 !s107 TB_Demultiplexer.vhd|
+!i113 1
+R11
+R12
+Atestbench
+R21
+R22
+R28
+R2
+R3
+Z34 DEx4 work 16 tb_demultiplexer 0 22 dP@o:9ejG4PDg9Toz7dNF0
+!i122 79
+l34
+Z35 L15 58
+Z36 V_G05e[M[iHGb=e0M_f4?;3
+Z37 !s100 BJJzkTQ]m]<WIN?7iTlLz2
+R6
+33
+R7
+!i10b 1
+R8
+R32
+R33
+!i113 1
+R11
+R12
+Etb_multiplexer
+Z38 w1782924986
+R21
+R22
+R28
 R2
 R3
 !i122 52
 R0
-Z23 8TB_Multiplexer.vhd
-Z24 FTB_Multiplexer.vhd
+Z39 8TB_Multiplexer.vhd
+Z40 FTB_Multiplexer.vhd
 l0
-R6
+R16
 V8hSlzd_49=nXF3oJE;V2U1
 !s100 L5Mn;4_HVY^7TmSQmZbZI3
-R7
+R6
 33
-R8
+R17
 !i10b 1
-R9
-Z25 !s90 -reportprogress|300|-2008|TB_Multiplexer.vhd|
-Z26 !s107 TB_Multiplexer.vhd|
+R18
+Z41 !s90 -reportprogress|300|-2008|TB_Multiplexer.vhd|
+Z42 !s107 TB_Multiplexer.vhd|
 !i113 1
+R11
 R12
-R13
 Atestbench
-R14
-R15
 R21
+R22
+R28
 R2
 R3
-Z27 DEx4 work 14 tb_multiplexer 0 22 8hSlzd_49=nXF3oJE;V2U1
+DEx4 work 14 tb_multiplexer 0 22 8hSlzd_49=nXF3oJE;V2U1
 !i122 52
 l35
-Z28 L15 58
-Z29 V@YUnfzW0D3009UeBbgOOO3
-Z30 !s100 <EcRI7d4Fk7Uj67PTRBBn1
-R7
+R35
+V@YUnfzW0D3009UeBbgOOO3
+!s100 <EcRI7d4Fk7Uj67PTRBBn1
+R6
 33
-R8
+R17
 !i10b 1
-R9
-R25
-R26
+R18
+R41
+R42
 !i113 1
+R11
 R12
-R13
 Etb_mux
-Z31 w1782924400
-R14
-R15
+Z43 w1782924400
 R21
+R22
+R28
 R2
 R3
 !i122 21
 R0
-R23
-R24
+R39
+R40
 l0
-R6
+R16
 VLJnBJzM[i<gNz[AVd2[jR2
 !s100 [[TVh<POi3^gTInlfP^KH1
-R7
+R6
 33
-Z32 !s110 1782924403
+Z44 !s110 1782924403
 !i10b 1
-Z33 !s108 1782924403.000000
-R25
-R26
+Z45 !s108 1782924403.000000
+R41
+R42
 !i113 1
+R11
 R12
-R13
 Atestbench
-R14
-R15
 R21
+R22
+R28
 R2
 R3
 DEx4 work 6 tb_mux 0 22 LJnBJzM[i<gNz[AVd2[jR2
@@ -180,13 +268,13 @@ l35
 L15 57
 V2>=acj=n_@mKhZKE_5WAm1
 !s100 H2h[JTBOzAj`GPIGc:WXA1
-R7
+R6
 33
-R32
+R44
 !i10b 1
-R33
-R25
-R26
+R45
+R41
+R42
 !i113 1
+R11
 R12
-R13
