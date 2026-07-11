@@ -27,15 +27,19 @@ use IEEE.STD_LOGIC_1164.ALL;  -- required for STD_LOGIC type
 entity LFSR is
    -- List ports
    port( sys_clock_100mhz : IN STD_LOGIC;
-         r_lfsr_out       : OUT STD_LOGIC_VECTOR(2 DOWNTO 0);
-         count_done       : OUT STD_LOGIC );
+         i_seed           : IN STD_LOGIC_VECTOR(2 DOWNTO 0);   -- value to use as key for determining when LFSR state repeats
+                                                               -- optionally can be used to initialize registers to seed value
+         enable_seed      : IN STD_LOGIC;                      -- pulse to trigger initialization of registers to seed value
+         r_lfsr_out       : OUT STD_LOGIC_VECTOR(2 DOWNTO 0);  -- optional output of register values
+         count_done       : OUT STD_LOGIC );                   -- done pulse to flag that LFSR state has repeated, meaning the
+                                                               -- total 2^n-1 count of possible state changes has been reached
 end entity LFSR;
 
 
 -- Define architecture
 architecture RTL of LFSR is
    -- Declare internal signals
-   signal r_lfsr   : STD_LOGIC_VECTOR(2 DOWNTO 0);
+   signal r_lfsr   : STD_LOGIC_VECTOR(2 DOWNTO 0) := (others => '0');
    signal XNOR_out : STD_LOGIC;
 begin
 
@@ -43,10 +47,16 @@ begin
    -- XNOR output of Bit(2) and Bit(1)
    process (sys_clock_100mhz) is begin
       if rising_edge(sys_clock_100mhz) then
-         r_lfsr <= r_lfsr(1 DOWNTO 0) & XNOR_out;
+         if (enable_seed) then   
+            r_lfsr <= i_seed;   -- initialize registers to seed value if enable pulse is detected
+         else
+            r_lfsr <= r_lfsr(1 DOWNTO 0) & XNOR_out;
+         end if;
       end if;
    end process;
 
-   XNOR_out <= r_lfsr(2) xnor r_lfsr(1);
+   XNOR_out   <= r_lfsr(2) xnor r_lfsr(1);
+   count_done <= '1' when r_lfsr = i_seed else '0';
+   r_lfsr_out <= r_lfsr;
 
 end architecture RTL;

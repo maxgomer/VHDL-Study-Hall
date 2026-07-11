@@ -2,16 +2,16 @@
 Verification Test Results
 =======================================================================================================================================================================================================
 
-Test Name: Demultiplexer
-Test Date: 2026-07-10 15:29:16
+Test Name: LFSR
+Test Date: 2026-07-11 14:13:56
 
 Check # | Pass/Fail | Description                                                                                                         | Expected       | Actual         | Tolerance                
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-                      Formal verification not performed for this module, visual inspection of testbench results only.                                                                                  
+                      This module is verified using visual inspection only, no formal verification is being performed.                                                                                 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Results Summary:
    Total PASS: 0 / 0
    Total FAIL: 0
 
-Test Elapsed Time = 0 hours : 0 minutes : 8 seconds
+Test Elapsed Time = 0 hours : 0 minutes : 4 seconds
