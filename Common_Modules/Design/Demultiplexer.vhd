@@ -1,9 +1,12 @@
 
+-- Demultiplexers are commonly not implemented as modules, as their code is
+-- small and easy to include anywhere.
+
 -- Headers
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;  -- required for STD_LOGIC type
 
--- Entity declaration
+-- Entity declaration for 1-4 Demux
 entity Demultiplexer is
    port ( in_data   : IN STRING(5 DOWNTO 1);
           out_data0 : OUT STRING(5 DOWNTO 1);
